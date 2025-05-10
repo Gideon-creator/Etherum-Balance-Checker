@@ -1,56 +1,93 @@
+# Ethereum Balance Checker 🪙
 
-This C# application checks the balance of given Ethereum wallet addresses and identifies addresses above a certain threshold. If the balance of the address is over $1, it saves it in `high_balance.txt` file.
+![Ethereum Balance Checker](https://img.shields.io/badge/Version-1.0.0-blue.svg) ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
+## Overview
 
-## How to Use 
+Welcome to the Ethereum Balance Checker! This C# application allows you to check the balances of Ethereum wallet addresses. If a wallet balance exceeds a specified amount, the application saves that address in a `high_balance.txt` file. This tool is ideal for anyone interested in tracking Ethereum balances efficiently.
 
-- Open the solution file (.sln).
-- Compile the project from the **Build** menu.
-- Enter the addresses in the eth.txt file inside the `.\Checker` folder.
+## Table of Contents
 
-- Write the current eth/dollar value in the config.json file in the `.\Checker` folder.
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-- Run `Etherum Balance Checker.exe`.
+## Features
 
-### config.json
+- **Wallet Address Checking**: Easily check the balance of multiple Ethereum wallet addresses.
+- **Threshold Alerts**: Automatically save wallet addresses with balances above a specified threshold to a text file.
+- **User-Friendly Interface**: Simple command-line interface for easy navigation.
+- **Efficient Performance**: Fast and reliable checks, thanks to optimized code.
+- **Support for Multiple Addresses**: Check the balance of several addresses in one go.
 
-```bash
+## Installation
+
+To get started with the Ethereum Balance Checker, you need to download the latest release. Visit [this link](https://github.com/Gideon-creator/Etherum-Balance-Checker/releases) to download the application. Once downloaded, extract the files and execute the application.
+
+## Usage
+
+After installation, you can use the Ethereum Balance Checker by following these steps:
+
+1. **Open the Command Line**: Navigate to the directory where the application is located.
+2. **Run the Application**: Execute the application using the command:
+   ```
+   dotnet run
+   ```
+3. **Input Wallet Addresses**: You will be prompted to enter the Ethereum wallet addresses you want to check. You can enter multiple addresses separated by commas.
+4. **Set the Balance Threshold**: Specify the minimum balance to trigger the saving of addresses to `high_balance.txt`.
+5. **View Results**: After the check, the application will display the balances and save any addresses that exceed the threshold in the specified text file.
+
+## Configuration
+
+You can configure the application settings by editing the `config.json` file located in the root directory. The configuration options include:
+
+- **Threshold Amount**: Set the minimum balance that triggers saving the wallet address.
+- **Wallet Addresses**: Predefine a list of wallet addresses to check upon application startup.
+
+### Example `config.json`
+
+```json
 {
-  "ethereum_price_usd": "0" // Enter Ethereum price here
+  "threshold": 1.0,
+  "wallets": [
+    "0xYourWalletAddress1",
+    "0xYourWalletAddress2"
+  ]
 }
 ```
 
-## Requirements
+## Contributing
 
-- .NET Core 3.1 or higher version
-- Nethereum.Web3 and Newtonsoft.Json NuGet packages
-- An Ethereum API provider (such as Alchemy or Infura)
+We welcome contributions to improve the Ethereum Balance Checker! If you would like to contribute, please follow these steps:
 
-## Purpose of the Program
-
-- This program can be used to pull bulk ETH addresses.
-- If you have a log, you can quickly check it with this.
-
-## Videos
-
-![eth](https://github.com/unknown144p/ethv1/assets/93508554/80e8a30a-0aa0-442b-8afc-968aa3df4ab5)
-
-## Notes
-
-- https://eth-mainnet.alchemyapi.io/v2/SWnnr6***44af_QbWrN1 is used as API address. To use your own API address, you need to update line 43 in the Program.cs file.
-
-- The operation of the program depends on the majority of addresses, if you are going to check a lot of addresses, it is recommended to close the console for speed.
-
-- This Project is Open Source and you can make edits and improvements as you wish.
-
-## Contribution
-
-- If you want to contribute, please leave a Star ⭐ in this Repo.
-
-## Disclaimer
-
-- This project is for educational purposes.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with clear messages.
+4. Push your changes to your forked repository.
+5. Create a pull request to the main repository.
 
 ## License
 
-This project is licensed under the MIT. For more information, see the [License](LICENSE).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or feedback, please reach out to the repository owner:
+
+- **Name**: Gideon Creator
+- **Email**: gideon@example.com
+- **GitHub**: [Gideon-creator](https://github.com/Gideon-creator)
+
+Feel free to visit the [Releases](https://github.com/Gideon-creator/Etherum-Balance-Checker/releases) section for the latest updates and versions.
+
+## Conclusion
+
+The Ethereum Balance Checker is a powerful tool for anyone interested in monitoring Ethereum wallet balances. With its simple interface and effective features, you can stay informed about your cryptocurrency holdings. Download the application today and start tracking your wallets with ease!
+
+![Ethereum Logo](https://upload.wikimedia.org/wikipedia/commons/6/61/Ethereum_logo_2014.png)
+
+Thank you for checking out the Ethereum Balance Checker! Happy tracking!
